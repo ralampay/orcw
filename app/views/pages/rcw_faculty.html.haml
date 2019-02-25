@@ -1,0 +1,30 @@
+#faculty
+  .padding
+  .container-fluid
+    .row
+      .col
+        %center
+          %h1
+            Research Faculty
+          %h3.text-muted
+            Search for a research faculty member
+        %hr
+        .row
+          .col-md-6
+            .form-group
+              %label
+                Name:
+              = text_field_tag :first_name, "", class: 'form-control'
+          .col-md-6
+            .form-group
+              %label
+                Category:
+              = text_field_tag :last_name, "", class: 'form-control'
+        .padding
+        .row
+          .col-md-12
+            %center
+              = link_to "#", class: 'btn btn-primary btn-lg' do
+                .fa.fa-search
+                Search Now
+        %hr

@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require refinery/formatting
+ *= require refinery/theme
+ *= require_self
+ */
+
+@import "bootstrap/dist/css/bootstrap.css";
+@import "font-awesome/css/font-awesome.css";
+@import "site";
+
+#faculty {
+  input.form-control {
+    border-radius: 0;
+    padding: 28px;
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 120%;
+    font-weight: bolder;
+  }
+}
+
+.card-home {
+  h1 {
+    color: #fff;
+    font-size: 150%;
+    text-shadow: 1px 1px 15px #000;
+  }
+
+  p {
+    color: #fff;
+    text-shadow: 1px 1px 15px #000;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0rem;
+    line-height: 1.7777777777777777rem;
+    margin-bottom: 1.7777777777777777rem;
+  }
+}
+
+h2 {
+  background-color: #b4e7ff;
+  font-size: 150%;
+  padding: 8px;
+  font-weight: 300;
+}
+
+p {
+  //text-shadow: 1px 1px 15px #000;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0rem;
+  line-height: 1.7777777777777777rem;
+  margin-bottom: 1.7777777777777777rem;
+  text-align: justify;
+}
+
+h1 {
+  min-height: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  //text-shadow: 1px 1px 2px #000;
+}
+
+.logo-text {
+  text-transform: uppercase;
+  color: #fefefe;
+  margin-left: 1.1em;
+}
+
+#card-1 {
+  background-color: #3498db;
+}
+
+#card-2 {
+  background-color: #95a5a6;
+}
+
+#card-3 {
+  background-color: #2980b9;
+}
