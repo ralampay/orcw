@@ -12,6 +12,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'dotenv-rails'
+
 gem 'haml'
 
 # Use Puma as the app server
