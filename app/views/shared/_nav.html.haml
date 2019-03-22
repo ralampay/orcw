@@ -8,14 +8,43 @@
       %span.navbar-toggler-icon
     #navbar-responsive.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
-        %li.nav-item
-          = link_to "/about", class: "nav-link" do
-            .fa.fa-file
-            About
-        %li.nav-item
-          = link_to "#", class: "nav-link" do
+        %li.nav-item.dropdown
+          = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
+            .fa.fa-download
+            Downloadable Media
+          .dropdown-menu
+            = link_to "#", class: "dropdown-item" do
+              .fa.fa-file
+              Research Manual
+            .dropdown-divider
+            = link_to "#", class: "dropdown-item" do
+              .fa.fa-file
+              Guidelines
+            .dropdown-divider
+        %li.nav-item.dropdown
+          = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
             .fa.fa-building
             Research Centers
+          .dropdown-menu
+            = link_to "#", class: "dropdown-item", data: { toggle: "modal", target: "#modal-loyola-schools" } do
+              .fa.fa-chevron-down
+              Loyola Schools
+            .dropdown-divider
+            = link_to "#", class: "dropdown-item" do
+              .fa.fa-chevron-down
+              Ateneo Professional Schools 
+            .dropdown-divider
+            = link_to "/about", class: "dropdown-item" do
+              .fa.fa-building
+              Office of Research and Creative Work
+            .dropdown-divider
+            = link_to "/urc", class: "dropdown-item" do
+              .fa.fa-building
+              University Research Council
+            .dropdown-divider
+            = link_to "/ethics_office", class: "dropdown-item" do
+              .fa.fa-building
+              University Research Ethics Office
         %li.nav-item
           = link_to "/rcw_faculty", class: "nav-link" do
             .fa.fa-users

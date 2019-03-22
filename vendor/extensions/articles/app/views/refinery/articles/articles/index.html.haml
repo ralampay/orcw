@@ -1,0 +1,35 @@
+.padding
+.container-fluid
+  .row
+    .col-md-12
+      %h1.text-muted.text-center
+        Articles / News / Stories
+  .padding
+  .row
+    .col-md-12
+      - if @articles.size == 0
+        %p
+          No articles found
+      - else
+        - @articles.each do |article|
+          .card
+            .card-body
+              .row
+                .col-sm-3
+                  = image_tag article.banner.url, width: "100%", class: "rounded img-fluid"
+                  .padding
+                .col-sm-9
+                  .row
+                    .col
+                      %h5
+                        #{article.title}
+                        %small.text-muted
+                          %i
+                            Published: #{article.published_at.strftime("%B %d, %Y")}
+                      %p
+                        #{truncate(article.content, length: 280, escape: false)}
+                  = link_to refinery.articles_article_path(article) do
+                    %small
+                      .fa.fa-arrow-right
+                      Read More
+          .padding

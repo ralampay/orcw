@@ -8,6 +8,8 @@
   <body id="<%= canonical_id @page %>" class="<%= view_template_class @page %>">
     <%= site_bar -%>
     <%= render partial: "shared/nav" %>
+    <%= render partial: "shared/modal_loyola_schools" %>
+    <%= render partial: "shared/modal_about" %>
     <%= yield %>
   </body>
 </html>

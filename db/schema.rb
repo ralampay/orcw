@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190225081605) do
+ActiveRecord::Schema.define(version: 20190321163719) do
+
+  create_table "refinery_articles", force: :cascade do |t|
+    t.string "title"
+    t.integer "banner_id"
+    t.text "content"
+    t.date "published_at"
+    t.boolean "is_published"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -49,6 +60,18 @@ ActiveRecord::Schema.define(version: 20190225081605) do
     t.string "full_name"
     t.index ["id"], name: "index_refinery_authentication_devise_users_on_id"
     t.index ["slug"], name: "index_refinery_authentication_devise_users_on_slug"
+  end
+
+  create_table "refinery_events", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.date "date_of_event"
+    t.date "published_at"
+    t.boolean "is_published"
+    t.string "external_link"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_image_translations", force: :cascade do |t|
