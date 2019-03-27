@@ -1,4 +1,4 @@
-%nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top
+%nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top.main-nav
   .container-fluid
     %a.navbar-brand{ href: "/" }
       = image_tag "logo.png", width: 50
@@ -15,7 +15,7 @@
           .dropdown-menu
             = link_to "#", class: "dropdown-item" do
               .fa.fa-file
-              Reference Manual
+              Research Manual
             .dropdown-divider
             = link_to "#", class: "dropdown-item" do
               .fa.fa-file
@@ -24,27 +24,23 @@
         %li.nav-item.dropdown
           = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
             .fa.fa-building
-            Offices
+            Administrative Bodies
           .dropdown-menu
             = link_to "/about", class: "dropdown-item" do
               .fa.fa-building
-              Office of Research and Creative Work
+              Office of Assoc. Dean for Research and Creative Work
             .dropdown-divider
-            = link_to "#", class: "dropdown-item" do
+            = link_to "/urc", class: "dropdown-item" do
               .fa.fa-building
-              Administration Office
-            .dropdown-divider
-            = link_to "#", class: "dropdown-item" do
-              .fa.fa-building
-              Technology Management Office
+              Research Council
         %li.nav-item
-          = link_to "/urc", class: "nav-link" do
+          = link_to "#", class: "nav-link", data: { toggle: "modal", target: "#modal-loyola-schools" } do
             .fa.fa-building
-            Research Council
+            Loyola Schools
         %li.nav-item
-          = link_to "/ethics_office", class: "nav-link" do
+          = link_to "#", class: "nav-link" do
             .fa.fa-building
-            Ethics Office
+            Professional Schools
         %li.nav-item
           = link_to "http://penoy.admu.edu.ph/research_portal", class: "nav-link" do
             .fa.fa-link

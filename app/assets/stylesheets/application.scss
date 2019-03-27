@@ -19,6 +19,12 @@
 @import "font-awesome/css/font-awesome.css";
 @import "site";
 
+.main-nav {
+  .nav-item, .nav-link {
+    font-size: 0.9em !important;
+  }
+}
+
 .navbar-dark {
   background-color: #4c5058e0 !important;
 }
