@@ -11,44 +11,40 @@
         %li.nav-item.dropdown
           = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
             .fa.fa-download
-            Downloadable Media
+            Downloads
           .dropdown-menu
             = link_to "#", class: "dropdown-item" do
               .fa.fa-file
-              Research Manual
+              Reference Manual
             .dropdown-divider
             = link_to "#", class: "dropdown-item" do
               .fa.fa-file
-              Guidelines
+              Compedium
             .dropdown-divider
         %li.nav-item.dropdown
           = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
             .fa.fa-building
-            Research Centers
+            Offices and Affiliates
           .dropdown-menu
-            = link_to "#", class: "dropdown-item", data: { toggle: "modal", target: "#modal-loyola-schools" } do
-              .fa.fa-chevron-down
-              Loyola Schools
-            .dropdown-divider
-            = link_to "#", class: "dropdown-item" do
-              .fa.fa-chevron-down
-              Ateneo Professional Schools 
-            .dropdown-divider
             = link_to "/about", class: "dropdown-item" do
               .fa.fa-building
               Office of Research and Creative Work
             .dropdown-divider
-            = link_to "/urc", class: "dropdown-item" do
+            = link_to "#", class: "dropdown-item" do
               .fa.fa-building
-              University Research Council
+              Administration Office
             .dropdown-divider
-            = link_to "/ethics_office", class: "dropdown-item" do
+            = link_to "#", class: "dropdown-item" do
               .fa.fa-building
-              University Research Ethics Office
+              Technology Management Office
         %li.nav-item
-          = link_to "/rcw_faculty", class: "nav-link" do
-            .fa.fa-users
-            RCW Faculty
+          = link_to "/urc", class: "nav-link" do
+            .fa.fa-building
+            URC
+        %li.nav-item
+          = link_to "/ethics_office", class: "nav-link" do
+            .fa.fa-building
+            Ethics Office
         %li.nav-item
           = link_to "http://penoy.admu.edu.ph/research_portal", class: "nav-link" do
             .fa.fa-link

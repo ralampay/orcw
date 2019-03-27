@@ -1,0 +1,19 @@
+%nav.navbar.navbar-expand-md.navbar-dark.bg-light
+  .container
+    %ul.nav.justify-content-center
+      %li.nav-item
+        = link_to "#", class: "nav-link", data: { toggle: "modal", target: "#modal-loyola-schools" } do
+          .fa.fa-building
+          Loyola Schools
+      %li.nav-item
+        = link_to "#", class: "nav-link" do
+          .fa.fa-building
+          Professional Schools
+      %li.nav-item
+        = link_to "/rcw_faculty", class: "nav-link" do
+          .fa.fa-users
+          Research Faculty
+      %li.nav-item
+        = link_to "/articles", class: "nav-link" do
+          .fa.fa-file
+          News / Stories / Events
