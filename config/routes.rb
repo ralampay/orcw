@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/rcw_faculty", to: "pages#rcw_faculty"
   get "/ls/sose", to: "pages#sose", as: :sose
   get "/ls/som", to: "pages#som", as: :som
+  get "/ls/som/download_organizational_matrix", to: "pages#som_download_organizational_matrix", as: :som_download_organizational_matrix
   get "/ls/soh", to: "pages#soh", as: :soh
   get "/ls/soss", to: "pages#soss", as: :soss
   get "/urc", to: "pages#urc"

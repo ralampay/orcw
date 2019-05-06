@@ -19,4 +19,12 @@ class PagesController < ApplicationController
 
   def urc
   end
+
+  def som_download_organizational_matrix
+    send_file(
+      "#{Rails.root}/files/som-organizational-matrix.pptx",
+      filename: "som-organizational-matrix.pptx",
+      type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    )
+  end
 end
