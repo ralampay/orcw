@@ -14,10 +14,6 @@ module Refinery
       def show
         @article = Article.find(params[:id])
 
-        @articles = Article.order('position ASC').where.not(
-                      id: @article.id
-                    )
-
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @article in the line below:
         present(@page)

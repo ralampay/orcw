@@ -19,7 +19,13 @@
         = image_tag o.banner.url, class: "img-fluid"
         .carousel-caption
           %h1.display-2
-            #{o.title}
+            = link_to articles_article_path(o.id), style: "color: #fff;" do
+              #{o.title}
+          %h3
+            #{o.short_description}
+          = link_to articles_article_path(o.id), class: "btn btn-info btn-outline-light btn-lg" do
+            .fa.fa-book
+            Read More
   .carousel-inner
   %a.carousel-control-prev{ href: "#slider", role: "button", data: { slide: "prev" } }
     %span.carousel-control-prev-icon{ aria: { hidden: "true" } }

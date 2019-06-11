@@ -3,6 +3,7 @@ class CreateArticlesArticles < ActiveRecord::Migration[5.1]
   def up
     create_table :refinery_articles do |t|
       t.string :title
+      t.string :short_description
       t.text :content
       t.integer :banner_id
       t.boolean :is_published

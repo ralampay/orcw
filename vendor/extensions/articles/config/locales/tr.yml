@@ -25,6 +25,7 @@ tr:
     attributes:
       'refinery/articles/article':
         title: Title
+        short_description: Short Description
         content: Content
         banner: Banner
         is_published: Is Published

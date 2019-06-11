@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190611105732) do
+ActiveRecord::Schema.define(version: 20190611122545) do
 
   create_table "refinery_articles", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20190611105732) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_featured"
+    t.string "short_description"
   end
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|

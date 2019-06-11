@@ -27,7 +27,7 @@
                           %i
                             Published: #{article.published_at.strftime("%B %d, %Y")}
                       %p
-                        #{truncate(article.content, length: 280, escape: false)}
+                        #{article.short_description}
                   = link_to refinery.articles_article_path(article) do
                     %small
                       .fa.fa-arrow-right
