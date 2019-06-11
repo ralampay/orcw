@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   get "/urc", to: "pages#urc"
   get "/ethics_office", to: "pages#ethics_office"
 
+  # Professional schools
+  get "/ps/asog", to: "pages#asog", as: :asog
+  get "/ps/agsb", to: "pages#agsb", as: :agsb
+  get "/ps/asmph", to: "pages#asmph", as: :asmph
+  get "/ps/als", to: "pages#als", as: :als
+
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the

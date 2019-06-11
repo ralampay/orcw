@@ -20,6 +20,18 @@ class PagesController < ApplicationController
   def urc
   end
 
+  def asog
+  end
+
+  def agsb
+  end
+
+  def asmph
+  end
+
+  def als
+  end
+
   def som_download_organizational_matrix
     send_file(
       "#{Rails.root}/files/som-organizational-matrix.pptx",
