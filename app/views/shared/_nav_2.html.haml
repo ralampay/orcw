@@ -1,15 +1,45 @@
 %nav.navbar.navbar-expand-md.navbar-dark.bg-light
   .container
     %ul.nav.justify-content-center
-      %li.nav-item
-        = link_to "#", class: "nav-link" do
+      %li.nav-item.dropdown
+        = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
           .fa.fa-book
           Journals
-      %li.nav-item
-        = link_to "#", class: "nav-link" do
+        .dropdown-menu
+          = link_to "https://journals.ateneo.edu/", class: "dropdown-item", target: '_blank' do
+            .fa.fa-book
+            Loyola Schools Journals
+          .dropdown-divider
+          = link_to "http://ateneolawjournal.com/", class: "dropdown-item", target: '_blank' do
+            .fa.fa-book
+            Ateneo Law Journal
+          .dropdown-divider
+          = link_to "https://www.ateneo.edu/ateneopress/", class: "dropdown-item", target: '_blank' do
+            .fa.fa-book
+            Ateneo de Manila University Press
+      %li.nav-item.dropdown
+        = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
           .fa.fa-download
-          Scholarly Work Manual
+          Policies and Guidelines
+        .dropdown-menu
+          - @policy_files.each_with_index do |o, i|
+            = link_to o.file.url, class: 'dropdown-item', target: '_blank' do
+              .fa.fa-download
+              #{o.title}
+            - if i != @policy_files.size - 1
+              .dropdown-divider
       %li.nav-item
         = link_to "#", class: "nav-link" do
           .fa.fa-download
           Compendia
+      %li.nav-item.dropdown
+        = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
+          .fa.fa-file
+          Downloadable Forms
+        .dropdown-menu
+          - @downloadable_forms.each_with_index do |o, i|
+            = link_to o.file.url, class: 'dropdown-item', target: '_blank' do
+              .fa.fa-download
+              #{o.title}
+            - if i != @downloadable_forms.size - 1
+              .dropdown-divider

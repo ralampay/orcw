@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+#        article: masculino/femenino
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: Crear nuevo policy file
+            reorder: Reordenar policy files
+            reorder_done: Reordenación de policy files completada
+          records:
+            title: Policy Files
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay policy files todavía. Pulsa en "Crear nuevo Policy File" para crear tu primer policy file.
+          policy_file:
+            view_live_html: Ver este policy file como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este policy file
+            delete: Borrar este policy file para siempre
+      policy_files:
+        show:
+          other: Otros policy files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

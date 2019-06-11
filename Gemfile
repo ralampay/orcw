@@ -73,3 +73,5 @@ gem 'refinerycms-authentication-devise', '~> 2.0'
 
 gem 'refinerycms-articles', path: 'vendor/extensions'
 gem 'refinerycms-events', path: 'vendor/extensions'
+gem 'refinerycms-downloadable_forms', path: 'vendor/extensions'
+gem 'refinerycms-policy_files', path: 'vendor/extensions'

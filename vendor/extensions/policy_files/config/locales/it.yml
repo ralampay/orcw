@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: Aggiungi Nuovo Policy File
+            reorder: Riordina Policy Files
+            reorder_done: Termina il Riordino di Policy Files
+          records:
+            title: Policy Files
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Policy Files. Clicca "Aggiungi Nuovo Policy File" per aggiungere il tuo primo policy file.
+          policy_file:
+            view_live_html: Guarda live questo policy file <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo policy file
+            delete: Rimuovi per sempre questo policy file
+      policy_files:
+        show:
+          other: Altri Policy Files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

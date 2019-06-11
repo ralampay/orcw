@@ -24,12 +24,16 @@
             = link_to "#", class: "dropdown-item" do
               .fa.fa-building
               University Research Ethics Office
+            .dropdown-divider
+            = link_to "#", class: "dropdown-item" do
+              .fa.fa-building
+              Ateneo Intellectual Property Office
         %li.nav-item
           = link_to "#", class: "nav-link", data: { toggle: "modal", target: "#modal-loyola-schools" } do
             .fa.fa-building
             Loyola Schools
-        %li.nav-item
-          = link_to "#", class: "nav-link" do
+        %li.nav-item.dropdown
+          = link_to "#", class: "nav-link", data: { toggle: "modal", target: "#modal-professional-schools" } do
             .fa.fa-building
             Professional Schools
         %li.nav-item

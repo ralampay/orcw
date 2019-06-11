@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: Nieuwe Policy File toevoegen
+            reorder: De volgorde van de Policy Files wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Policy File-volgorde
+          records:
+            title: Policy Files
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Policy Files. Druk op 'Nieuwe Policy File toevoegen' om de eerste toe te voegen.
+          policy_file:
+            view_live_html: Deze policy file op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze policy file
+            delete: Deze policy file definitief verwijderen
+      policy_files:
+        show:
+          other: Andere Policy Files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

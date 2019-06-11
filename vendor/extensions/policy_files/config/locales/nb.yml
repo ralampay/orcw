@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: Lag en ny Policy File
+            reorder: Endre rekkefølgen på Policy Files
+            reorder_done: Ferdig å endre rekkefølgen Policy Files
+          records:
+            title: Policy Files
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Policy Files enda. Klikk på "Lag en ny Policy File" for å legge til din første policy file.
+          policy_file:
+            view_live_html: Vis hvordan denne policy file ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne policy file
+            delete: Fjern denne policy file permanent
+      policy_files:
+        show:
+          other: Andre Policy Files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

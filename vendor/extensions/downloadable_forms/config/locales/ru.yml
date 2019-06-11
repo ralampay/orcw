@@ -1,0 +1,30 @@
+ru:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: Добавить Downloadable Form
+            reorder: Изменить порядок Downloadable Forms
+            reorder_done: Закончить изменять порядок Downloadable Forms
+          records:
+            title: Downloadable Forms
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Downloadable Forms" не найдено. Нажмите "Добавить Downloadable Form" чтобы создать downloadable form.
+          downloadable_form:
+            view_live_html: Просмотреть downloadable form вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать downloadable form
+            delete: Удалить downloadable form навсегда
+      downloadable_forms:
+        show:
+          other: Другие Downloadable Forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

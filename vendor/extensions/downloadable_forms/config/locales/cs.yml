@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: Přidat Downloadable Form
+            reorder: Řadit Downloadable Forms
+            reorder_done: Konec řazení Downloadable Forms
+          records:
+            title: Downloadable Forms
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Downloadable Forms. Zvolte "Přidat Downloadable Form" pro přidání prvního downloadable form.
+          downloadable_form:
+            view_live_html: Zobrazit náhled downloadable form<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit downloadable form
+            delete: Smazat downloadable form
+      downloadable_forms:
+        show:
+          other: Další Downloadable Forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

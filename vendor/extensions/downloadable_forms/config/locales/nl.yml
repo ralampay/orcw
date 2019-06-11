@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: Nieuwe Downloadable Form toevoegen
+            reorder: De volgorde van de Downloadable Forms wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Downloadable Form-volgorde
+          records:
+            title: Downloadable Forms
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Downloadable Forms. Druk op 'Nieuwe Downloadable Form toevoegen' om de eerste toe te voegen.
+          downloadable_form:
+            view_live_html: Deze downloadable form op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze downloadable form
+            delete: Deze downloadable form definitief verwijderen
+      downloadable_forms:
+        show:
+          other: Andere Downloadable Forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

@@ -1,7 +1,11 @@
 #slider.carousel.slide{ data: { ride: "carousel" } }
+  %ol.carousel-indicators
+    %li.active{ data: { target: "#slider", slide: { to: "0" } } }
+    - ::Refinery::Articles::Article.where(is_featured: true).each_with_index do |o, i|
+      %li{ data: { target: "#slider", slide: { to: "#{i + 1}" } } }
   .carousel-inner
     .carousel-item.active
-      = image_tag "building.jpg"
+      = image_tag "building.jpg", class: "img-fluid"
       .carousel-caption
         %h1.display-2
           Ateneo de Manila University
@@ -10,3 +14,18 @@
         = link_to "#", class: "btn btn-primary btn-outline-light btn-lg", data: { toggle: "modal", target: "#modal-about" } do
           .fa.fa-mouse-pointer
           Learn More
+    - ::Refinery::Articles::Article.where(is_featured: true).each do |o|
+      .carousel-item
+        = image_tag o.banner.url, class: "img-fluid"
+        .carousel-caption
+          %h1.display-2
+            #{o.title}
+  .carousel-inner
+  %a.carousel-control-prev{ href: "#slider", role: "button", data: { slide: "prev" } }
+    %span.carousel-control-prev-icon{ aria: { hidden: "true" } }
+    %span.sr-only
+      Previous
+  %a.carousel-control-next{ href: "#slider", role: "button", data: { slide: "next" } }
+    %span.carousel-control-next-icon{ aria: { hidden: "true" } }
+    %span.sr-only
+      Next

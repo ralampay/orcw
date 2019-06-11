@@ -1,0 +1,49 @@
+<% content_for :body_content_title do %>
+  <%= @policy_file.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @policy_file.title %>
+    </p>
+  </section>
+  <section>
+    <h1>File</h1>
+    <p>
+      <% if @policy_file.file.present? %>
+        <%= link_to 'file', @policy_file.file.url %>
+      <% else %>
+        file
+      <% end %>
+    </p>
+  </section>
+  <section>
+    <h1>Is Published</h1>
+    <p>
+      <%=raw @policy_file.is_published %>
+    </p>
+  </section>
+  <section>
+    <h1>Position</h1>
+    <p>
+      <%=raw @policy_file.position %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="policy_files">
+      <% @policy_files.each do |policy_file| %>
+        <li>
+          <%= link_to policy_file.title, refinery.policy_files_policy_file_path(policy_file) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

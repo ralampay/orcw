@@ -1,0 +1,15 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(downloadable_form) -%>">
+  <span class='title'>
+    <%= downloadable_form.title %>
+  </span>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.downloadable_forms_downloadable_form_path(downloadable_form), t('.view_live_html')) %>
+    <%= action_icon(:edit,    refinery.edit_downloadable_forms_admin_downloadable_form_path(downloadable_form), t('.edit') ) %>
+    <%= action_icon(:delete,  refinery.downloadable_forms_admin_downloadable_form_path(downloadable_form), t('.delete'),
+      { class: "cancel confirm-delete",
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: downloadable_form.title)}}  ) %>
+  </span>
+</li>

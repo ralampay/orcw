@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: Lag en ny Downloadable Form
+            reorder: Endre rekkefølgen på Downloadable Forms
+            reorder_done: Ferdig å endre rekkefølgen Downloadable Forms
+          records:
+            title: Downloadable Forms
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Downloadable Forms enda. Klikk på "Lag en ny Downloadable Form" for å legge til din første downloadable form.
+          downloadable_form:
+            view_live_html: Vis hvordan denne downloadable form ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne downloadable form
+            delete: Fjern denne downloadable form permanent
+      downloadable_forms:
+        show:
+          other: Andre Downloadable Forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

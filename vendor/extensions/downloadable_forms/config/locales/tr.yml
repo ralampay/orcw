@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: Yeni Ekle Downloadable Form
+            reorder: Tekrar sirala Downloadable Forms
+            reorder_done: Tekrar siralama tamamlandiDownloadable Forms
+          records:
+            title: Downloadable Forms
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Downloadable Forms yok henuz.  Tikla "Yeni Ekle Downloadable Form" eklemek senin ilk downloadable form.
+          downloadable_form:
+            view_live_html: Bunu canlu downloadable form goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle downloadable form
+            delete: Bunu Sil downloadable form sonsuza dek
+      downloadable_forms:
+        show:
+          other: Diger Downloadable Forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

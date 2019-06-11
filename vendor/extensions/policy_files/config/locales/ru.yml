@@ -1,0 +1,30 @@
+ru:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: Добавить Policy File
+            reorder: Изменить порядок Policy Files
+            reorder_done: Закончить изменять порядок Policy Files
+          records:
+            title: Policy Files
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Policy Files" не найдено. Нажмите "Добавить Policy File" чтобы создать policy file.
+          policy_file:
+            view_live_html: Просмотреть policy file вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать policy file
+            delete: Удалить policy file навсегда
+      policy_files:
+        show:
+          other: Другие Policy Files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

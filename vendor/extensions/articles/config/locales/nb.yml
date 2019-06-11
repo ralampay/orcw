@@ -25,7 +25,9 @@ nb:
     attributes:
       'refinery/articles/article':
         title: Title
-        banner: Banner
         content: Content
-        published_at: Published At
+        banner: Banner
         is_published: Is Published
+        is_featured: Is Featured
+        published_at: Published At
+        position: Position

@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: Přidat Policy File
+            reorder: Řadit Policy Files
+            reorder_done: Konec řazení Policy Files
+          records:
+            title: Policy Files
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Policy Files. Zvolte "Přidat Policy File" pro přidání prvního policy file.
+          policy_file:
+            view_live_html: Zobrazit náhled policy file<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit policy file
+            delete: Smazat policy file
+      policy_files:
+        show:
+          other: Další Policy Files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

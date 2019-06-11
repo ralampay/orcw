@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190321163719) do
+ActiveRecord::Schema.define(version: 20190611105732) do
 
   create_table "refinery_articles", force: :cascade do |t|
     t.string "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20190321163719) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_featured"
   end
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
@@ -62,6 +63,15 @@ ActiveRecord::Schema.define(version: 20190321163719) do
     t.index ["slug"], name: "index_refinery_authentication_devise_users_on_slug"
   end
 
+  create_table "refinery_downloadable_forms", force: :cascade do |t|
+    t.string "title"
+    t.integer "file_id"
+    t.boolean "is_published"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "refinery_events", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -69,6 +79,17 @@ ActiveRecord::Schema.define(version: 20190321163719) do
     t.date "published_at"
     t.boolean "is_published"
     t.string "external_link"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "refinery_featured_events", force: :cascade do |t|
+    t.string "title"
+    t.string "subtext"
+    t.datetime "date"
+    t.integer "photo_id"
+    t.text "blurb"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -152,6 +173,15 @@ ActiveRecord::Schema.define(version: 20190321163719) do
     t.index ["lft"], name: "index_refinery_pages_on_lft"
     t.index ["parent_id"], name: "index_refinery_pages_on_parent_id"
     t.index ["rgt"], name: "index_refinery_pages_on_rgt"
+  end
+
+  create_table "refinery_policy_files", force: :cascade do |t|
+    t.string "title"
+    t.integer "file_id"
+    t.boolean "is_published"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_resource_translations", force: :cascade do |t|

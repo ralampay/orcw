@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="downloadable_forms">
+    <% @downloadable_forms.each do |downloadable_form| %>
+      <li>
+        <%= link_to downloadable_form.title, refinery.downloadable_forms_downloadable_form_path(downloadable_form) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

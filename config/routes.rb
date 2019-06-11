@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get "/about", to: "pages#about"
   get "/rcw_faculty", to: "pages#rcw_faculty"
   get "/ls/sose", to: "pages#sose", as: :sose

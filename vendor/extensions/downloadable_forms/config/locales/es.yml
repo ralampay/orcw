@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+#        article: masculino/femenino
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: Crear nuevo downloadable form
+            reorder: Reordenar downloadable forms
+            reorder_done: Reordenación de downloadable forms completada
+          records:
+            title: Downloadable Forms
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay downloadable forms todavía. Pulsa en "Crear nuevo Downloadable Form" para crear tu primer downloadable form.
+          downloadable_form:
+            view_live_html: Ver este downloadable form como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este downloadable form
+            delete: Borrar este downloadable form para siempre
+      downloadable_forms:
+        show:
+          other: Otros downloadable forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

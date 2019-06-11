@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      downloadable_forms:
+        title: Downloadable Forms
+    downloadable_forms:
+      admin:
+        downloadable_forms:
+          actions:
+            create_new: 建立新的 Downloadable Form
+            reorder: 对 Downloadable Forms 重新排序
+            reorder_done: 对 Downloadable Forms 的重新排序结束
+          records:
+            title: Downloadable Forms
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Downloadable Forms yet. Click "Add New Downloadable Form" to add your first downloadable form.
+            no_items_yet: 目前没有 Downloadable Forms . 点击 "Add New Downloadable Form" 创建一个downloadable form.
+          downloadable_form:
+            view_live_html: 查看 downloadable form 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 downloadable form
+            delete: 永久删除 downloadable form
+      downloadable_forms:
+        show:
+          other: 其他 Downloadable Forms
+  activerecord:
+    attributes:
+      'refinery/downloadable_forms/downloadable_form':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position

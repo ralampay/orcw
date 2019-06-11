@@ -1,0 +1,49 @@
+<% content_for :body_content_title do %>
+  <%= @downloadable_form.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @downloadable_form.title %>
+    </p>
+  </section>
+  <section>
+    <h1>File</h1>
+    <p>
+      <% if @downloadable_form.file.present? %>
+        <%= link_to 'file', @downloadable_form.file.url %>
+      <% else %>
+        file
+      <% end %>
+    </p>
+  </section>
+  <section>
+    <h1>Is Published</h1>
+    <p>
+      <%=raw @downloadable_form.is_published %>
+    </p>
+  </section>
+  <section>
+    <h1>Position</h1>
+    <p>
+      <%=raw @downloadable_form.position %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="downloadable_forms">
+      <% @downloadable_forms.each do |downloadable_form| %>
+        <li>
+          <%= link_to downloadable_form.title, refinery.downloadable_forms_downloadable_form_path(downloadable_form) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

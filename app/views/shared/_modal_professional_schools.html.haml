@@ -1,0 +1,43 @@
+#modal-professional-schools.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-body
+        .modal-body-content
+          %h5
+            Ateneo de Manila Loyola Schools
+          %hr
+          .row
+            .col-md-6.col-xs-12
+              .card.img-fluid
+                = image_tag "ls-faura.jpg", class: "card-img-top"
+                .card-img-overlay
+                  = link_to "/ps/asog" do
+                    %center
+                      %h4.card-title.card-title-overlay.display-2
+                        Ateneo School of Government
+            .col-md-6.col-xs-12
+              .card.img-fluid
+                = image_tag "ls-humanities.jpg", class: "card-img-top"
+                .card-img-overlay
+                  = link_to "/ps/agsb" do
+                    %center
+                      %h4.card-title.card-title-overlay.display-2
+                        Ateneo Graduate School of Business
+          %hr
+          .row
+            .col-md-6.col-xs-12
+              .card.img-fluid
+                = image_tag "ls-som.jpg", class: "card-img-top"
+                .card-img-overlay
+                  = link_to "/ps/asmph" do
+                    %center
+                      %h4.card-title.card-title-overlay.display-2
+                        Ateneo School of Medicine and Public Health
+            .col-md-6.col-xs-12
+              .card.img-fluid
+                = image_tag "ls-socsci.jpg", class: "card-img-top"
+                .card-img-overlay
+                  = link_to "/ps/als" do
+                    %center
+                      %h4.card-title.card-title-overlay.display-2
+                        Ateneo Law School

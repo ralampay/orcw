@@ -14,3 +14,9 @@ Refinery::Articles::Engine.load_seed
 
 # Added by Refinery CMS Events extension
 Refinery::Events::Engine.load_seed
+
+# Added by Refinery CMS DownloadableForms extension
+Refinery::DownloadableForms::Engine.load_seed
+
+# Added by Refinery CMS PolicyFiles extension
+Refinery::PolicyFiles::Engine.load_seed

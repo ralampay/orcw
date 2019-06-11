@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::DownloadableForms::Admin::DownloadableFormsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.downloadable_forms_admin_downloadable_forms_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_downloadable_forms_admin_downloadable_form_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::DownloadableForms::Admin::DownloadableFormsController.sortable? && ::Refinery::DownloadableForms::DownloadableForm.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.downloadable_forms_admin_downloadable_forms_path,
+                     t('.reorder', what:  "Downloadable Forms"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.downloadable_forms_admin_downloadable_forms_path,
+                      t('.reorder_done', what: "Downloadable Forms"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

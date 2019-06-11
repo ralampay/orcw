@@ -12,6 +12,15 @@ module Refinery
     def home
       @articles = ::Refinery::Articles::Article.all.order("published_at DESC")
       @events   = ::Refinery::Events::Event.all.order("date_of_event DESC")
+
+      @downloadable_forms = ::Refinery::DownloadableForms::DownloadableForm.where(
+                              is_published: true
+                            ).order("position ASC")
+
+      @policy_files = ::Refinery::PolicyFiles::PolicyFile.where(
+                        is_published: true
+                      ).order("position ASC")
+
       render_with_templates?
     end
 

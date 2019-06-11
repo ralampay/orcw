@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      policy_files:
+        title: Policy Files
+    policy_files:
+      admin:
+        policy_files:
+          actions:
+            create_new: 建立新的 Policy File
+            reorder: 对 Policy Files 重新排序
+            reorder_done: 对 Policy Files 的重新排序结束
+          records:
+            title: Policy Files
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Policy Files yet. Click "Add New Policy File" to add your first policy file.
+            no_items_yet: 目前没有 Policy Files . 点击 "Add New Policy File" 创建一个policy file.
+          policy_file:
+            view_live_html: 查看 policy file 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 policy file
+            delete: 永久删除 policy file
+      policy_files:
+        show:
+          other: 其他 Policy Files
+  activerecord:
+    attributes:
+      'refinery/policy_files/policy_file':
+        title: Title
+        file: File
+        is_published: Is Published
+        position: Position
