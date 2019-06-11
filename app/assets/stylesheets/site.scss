@@ -5,6 +5,36 @@ html, body {
   color: #222;
 }
 
+.bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.bottom-center {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-title {
+  text-shadow: 1px 1px 15px #000;
+  color: #fff;
+  font-size: 1.2em;
+
+  a {
+    color: #fff;
+  }
+}
+
 .backdrop {
   background: asset-url('building2.jpg') no-repeat center center fixed;
   background-size: cover;
