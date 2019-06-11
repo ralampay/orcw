@@ -4,11 +4,11 @@
     .col-md-4.col-xs-12
       %h2
         More Articles / News / Stories
-      - if @articles.size == 0
+      - if @articles.where.not(id: @article.id).size == 0
         %p
           No other articles found
       - else
-        - @articles.each do |article|
+        - @articles.where.not(id: @article.id).each do |article|
           .card
             .card-body
               .row
