@@ -42,6 +42,13 @@ html, body {
   width: 100%;
 }
 
+.backdrop-soss {
+  background: asset-url('backdrop-soss.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 30%;
+  width: 100%;
+}
+
 .backdrop-som {
   background: asset-url('backdrop-som.jpg') no-repeat center center fixed;
   background-size: cover;
