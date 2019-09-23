@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/ls/soss", to: "pages#soss", as: :soss
   get "/urc", to: "pages#urc"
   get "/ethics_office", to: "pages#ethics_office"
+  get "/intellectual_property_office", to: "pages#aipo"
 
   # Professional schools
   get "/ps/asog", to: "pages#asog", as: :asog
