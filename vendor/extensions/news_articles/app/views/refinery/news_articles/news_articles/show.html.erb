@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @news_article.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @news_article.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @news_article.content %>
+    </p>
+  </section>
+  <section>
+    <h1>Date</h1>
+    <p>
+      <%=raw @news_article.date %>
+    </p>
+  </section>
+  <section>
+    <h1>Is Published</h1>
+    <p>
+      <%=raw @news_article.is_published %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="news_articles">
+      <% @news_articles.each do |news_article| %>
+        <li>
+          <%= link_to news_article.title, refinery.news_articles_news_article_path(news_article) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

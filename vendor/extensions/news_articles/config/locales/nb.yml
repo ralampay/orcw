@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      news_articles:
+        title: News Articles
+    news_articles:
+      admin:
+        news_articles:
+          actions:
+            create_new: Lag en ny News Article
+            reorder: Endre rekkefølgen på News Articles
+            reorder_done: Ferdig å endre rekkefølgen News Articles
+          records:
+            title: News Articles
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen News Articles enda. Klikk på "Lag en ny News Article" for å legge til din første news article.
+          news_article:
+            view_live_html: Vis hvordan denne news article ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne news article
+            delete: Fjern denne news article permanent
+      news_articles:
+        show:
+          other: Andre News Articles
+  activerecord:
+    attributes:
+      'refinery/news_articles/news_article':
+        title: Title
+        content: Content
+        date: Date
+        is_published: Is Published

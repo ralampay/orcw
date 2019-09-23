@@ -10,8 +10,13 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
-      @articles = ::Refinery::Articles::Article.all.order("published_at DESC")
-      @events   = ::Refinery::Events::Event.all.order("date_of_event DESC")
+      @articles       = ::Refinery::Articles::Article.all.order("published_at DESC")
+      @events         = ::Refinery::Events::Event.all.order("date_of_event DESC")
+      @news_articles  = ::Refinery::NewsArticles::NewsArticle.where(
+                          is_published: true
+                        ).order(
+                          "date DESC"
+                        )
 
       @downloadable_forms = ::Refinery::DownloadableForms::DownloadableForm.where(
                               is_published: true

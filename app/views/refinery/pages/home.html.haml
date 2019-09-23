@@ -6,25 +6,26 @@
   .row
     .col-md-3.col-xs-12
       %h2
-        Upcoming Events
-      - @events.each do |event|
-        .card
-          .card-body
-            %h5
-              #{event.title}
-            %small.text-muted
-              #{event.date_of_event}
-            %p
-              #{event.description}
-          .card-footer
-            - if event.external_link.present?
-              = link_to event.external_link, target: '_blank' do
+        Latest News
+      -if @news_articles.size > 0
+        - @news_articles.each do |o|
+          .card
+            .card-body
+              %h5
+                #{o.title}
+              %small.text-muted
+                #{o.date}
+            .card-footer
+              = link_to news_articles_news_article_path(o), target: '_blank' do
                 .fa.fa-link
-                Link to Event
-        %hr
-    .col-md-9.col-xs-12
+                Read More
+      - else
+        %p
+          No news...
+      .padding
+    .col-md-6.col-xs-12
       %h1
-        Featured Articles / News / Stories
+        Featured Research Articles
       %hr
       - if @articles.size == 0
         %p
@@ -58,5 +59,27 @@
         %h5
           = link_to "/articles" do
             .fa.fa-arrow-right
-            Read More Articles / News / Stories
+            Read More Articles
         .padding
+    .col-md-3.col-xs-12
+      %h2
+        Upcoming Events
+      - if @events.size > 0
+        - @events.each do |event|
+          .card
+            .card-body
+              %h5
+                #{event.title}
+              %small.text-muted
+                #{event.date_of_event}
+              %p
+                #{event.description}
+            .card-footer
+              - if event.external_link.present?
+                = link_to event.external_link, target: '_blank' do
+                  .fa.fa-link
+                  Link to Event
+      - else
+        %p
+          No upcoming events...
+      %hr

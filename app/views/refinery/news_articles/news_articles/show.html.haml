@@ -1,0 +1,45 @@
+.padding
+.container-fluid
+  .row
+    .col-md-4.col-xs-12
+      %h2
+        More News
+      - if @news_articles.where.not(id: @news_article.id).size == 0
+        %p
+          No other news found...
+      - else
+        - @news_articles.where.not(id: @news_article.id).each do |news_article|
+          .card
+            .card-body
+              .row
+                .col-md-12.col-xs-12
+                  .row
+                    .col
+                      %h5
+                        = link_to refinery.news_articles_news_article_path(news_article) do
+                          #{news_article.title}
+                          %small.text-muted
+                            %i
+                              Published: #{news_article.date.strftime("%B %d, %Y")}
+                      %p
+                        #{truncate(news_article.content, length: 100, escape: false)}
+                  = link_to refinery.news_articles_news_article_path(news_article) do
+                    %small
+                      .fa.fa-arrow-right
+                      Read More
+          .padding
+    .col-md-8.col-xs-12
+      .padding
+      %h3
+        #{@news_article.title}
+        %small.text-muted
+          #{@news_article.date}
+      %hr
+      #{@news_article.content.html_safe}
+
+      %hr
+
+      = link_to '/' do
+        .fa.fa-arrow-left
+        Back Home
+      .padding

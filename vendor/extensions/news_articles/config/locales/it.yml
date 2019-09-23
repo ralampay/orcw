@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      news_articles:
+        title: News Articles
+    news_articles:
+      admin:
+        news_articles:
+          actions:
+            create_new: Aggiungi Nuovo News Article
+            reorder: Riordina News Articles
+            reorder_done: Termina il Riordino di News Articles
+          records:
+            title: News Articles
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora News Articles. Clicca "Aggiungi Nuovo News Article" per aggiungere il tuo primo news article.
+          news_article:
+            view_live_html: Guarda live questo news article <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo news article
+            delete: Rimuovi per sempre questo news article
+      news_articles:
+        show:
+          other: Altri News Articles
+  activerecord:
+    attributes:
+      'refinery/news_articles/news_article':
+        title: Title
+        content: Content
+        date: Date
+        is_published: Is Published

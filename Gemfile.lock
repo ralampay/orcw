@@ -10,6 +10,9 @@ PATH
     refinerycms-events (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
+    refinerycms-news_articles (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
     refinerycms-policy_files (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
@@ -357,6 +360,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-downloadable_forms!
   refinerycms-events!
+  refinerycms-news_articles!
   refinerycms-policy_files!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
   sass-rails (~> 5.0)

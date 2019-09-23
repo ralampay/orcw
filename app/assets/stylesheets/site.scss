@@ -3,7 +3,16 @@ html, body {
   width: 100%;
   background-color: #fff;
   color: #222;
-  font-family: "Berling Roman" !important;
+  font-family: Tahoma, Arial, Sans-serif !important;
+}
+
+.megamenu {
+  width: 100%;
+  transform: translate3d(0px, 0px, 0px) !important;
+  padding: 30px;
+  a {
+    padding: 0;
+  }
 }
 
 .bottom-left {
@@ -60,7 +69,8 @@ html, body {
 
 .navbar {
   padding: .8rem;
-  background-color: #10069f !important;
+  //background-color: #10069f !important;
+  background-color: #092c73 !important;
 }
 
 .navbar-nav li {

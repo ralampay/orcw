@@ -20,3 +20,6 @@ Refinery::DownloadableForms::Engine.load_seed
 
 # Added by Refinery CMS PolicyFiles extension
 Refinery::PolicyFiles::Engine.load_seed
+
+# Added by Refinery CMS NewsArticles extension
+Refinery::NewsArticles::Engine.load_seed

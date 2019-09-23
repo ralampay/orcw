@@ -11,7 +11,7 @@
           Ateneo de Manila University
         %h3
           Research and Creative Work
-        = link_to "#", class: "btn btn-primary btn-outline-light btn-lg", data: { toggle: "modal", target: "#modal-about" } do
+        = link_to "/learn", class: "btn btn-primary btn-outline-light btn-lg" do
           .fa.fa-mouse-pointer
           Learn More
     - ::Refinery::Articles::Article.where(is_featured: true).each do |o|

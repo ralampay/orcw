@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      news_articles:
+        title: News Articles
+    news_articles:
+      admin:
+        news_articles:
+          actions:
+            create_new: Pridať News Article
+            reorder: Preusporiadať News Articles
+            reorder_done: Koniec radenia News Articles
+          records:
+            title: News Articles
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne News Articles. Kliknite na "Pridať News Article" pre pridanie prvého news article.
+          news_article:
+            view_live_html: Zobraziť náhľad news article<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť news article
+            delete: Zmazať news article
+      news_articles:
+        show:
+          other: Daľšie News Articles
+  activerecord:
+    attributes:
+      'refinery/news_articles/news_article':
+        title: Title
+        content: Content
+        date: Date
+        is_published: Is Published

@@ -1,13 +1,15 @@
 %nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top.main-nav
   .container-fluid
-    %a.navbar-brand{ href: "/" }
-      = image_tag "logo.png", width: 50
-      %span.logo-text
-        Ateneo de Manila University
+    %a.navbar-brand{ href: "https://ateneo.edu/" }
+      = image_tag "logo_0.png", height: 50
     %button.navbar-toggler{ type: "button", data: { toggle: "collapse", target: "#navbar-responsive" } }
       %span.navbar-toggler-icon
     #navbar-responsive.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
+        %li.nav-item
+          = link_to "/", class: "nav-link" do
+            .fa.fa-home
+            RCW Main
         %li.nav-item.dropdown
           = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
             .fa.fa-building
@@ -29,14 +31,65 @@
               .fa.fa-building
               Ateneo Intellectual Property Office
         %li.nav-item
-          = link_to "#", class: "nav-link", data: { toggle: "modal", target: "#modal-loyola-schools" } do
+          = link_to "#", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" } do
             .fa.fa-building
-            Loyola Schools
-        %li.nav-item.dropdown
-          = link_to "#", class: "nav-link", data: { toggle: "modal", target: "#modal-professional-schools" } do
-            .fa.fa-building
-            Professional Schools
+            Schools
+          .dropdown-menu.megamenu
+            .container-fluid
+              .row
+                .col-md-8.col-xs-12
+                  .row
+                    .col-md-6.col-xs-12
+                      %h4
+                        Loyola Schools
+                      %ul
+                        %li.school-image-display{ data: { label: "School of Science and Engineering", img: "#{asset_path('ls-faura.jpg')}" } }
+                          = link_to "/ls/sose" do
+                            School of Science and Engineering
+                        %li.school-image-display{ data: { label: "School of Humanities", img: "#{asset_path('ls-humanities.jpg')}" } }
+                          = link_to "/ls/soh" do
+                            School of Humanities
+                        %li.school-image-display{ data: { label: "School of Management", img: "#{asset_path('ls-som.jpg')}" } }
+                          = link_to "/ls/som" do
+                            School of Management
+                        %li.school-image-display{ data: { label: "School of Social Sciences", img: "#{asset_path('ls-socsci.jpg')}" } }
+                          = link_to "/ls/soss" do
+                            School of Social Sciences
+                    .col-md-6.col-xs-12
+                      %h4
+                        Professional Schools
+                      %ul
+                        %li.school-image-display{ data: { label: "School of Government", img: "#{asset_path('ls-faura.jpg')}" } }
+                          = link_to "/ps/asog" do
+                            Ateneo School of Government
+                        %li.school-image-display{ data: { label: "Graduate School of Business", img: "#{asset_path('ls-faura.jpg')}" } }
+                          = link_to "/ps/agsb" do
+                            Ateneo Graduate School of Business
+                        %li.school-image-display{ data: { label: "School of Medicine and Public Health", img: "#{asset_path('ls-faura.jpg')}" } }
+                          = link_to "/ps/asmph" do
+                            School of Medicine and Public Health
+                        %li.school-image-display{ data: { label: "Ateneo Law School", img: "#{asset_path('ls-faura.jpg')}" } }
+                          = link_to "/ps/als" do
+                            Ateneo Law School
+                .col-md-4.col-xs-12
+                  %h5#school-display-label
+                    Ateneo de Manila Schools
+                  = image_tag "ls-faura.jpg", class: "card-img-top", id: "school-display-img"
         %li.nav-item
           = link_to "http://penoy.admu.edu.ph/research-portal/", target: '_blank', class: "nav-link" do
             .fa.fa-link
             Research and Creative Work Portal
+
+:javascript
+  $(document).ready(function() {
+    var $schoolDisplayLabel = $("#school-display-label");
+    var $schoolDisplayImg   = $("#school-display-img");
+
+    $(".school-image-display").hover(function() {
+      var label = $(this).data("label");
+      var img   = $(this).data("img");
+
+      $schoolDisplayLabel.html(label);
+      $schoolDisplayImg.attr("src", img);
+    });
+  });

@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      news_articles:
+        title: News Articles
+    news_articles:
+      admin:
+        news_articles:
+          actions:
+            create_new: Nieuwe News Article toevoegen
+            reorder: De volgorde van de News Articles wijzigen
+            reorder_done: Klaar met het wijzingen van de van de News Article-volgorde
+          records:
+            title: News Articles
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen News Articles. Druk op 'Nieuwe News Article toevoegen' om de eerste toe te voegen.
+          news_article:
+            view_live_html: Deze news article op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze news article
+            delete: Deze news article definitief verwijderen
+      news_articles:
+        show:
+          other: Andere News Articles
+  activerecord:
+    attributes:
+      'refinery/news_articles/news_article':
+        title: Title
+        content: Content
+        date: Date
+        is_published: Is Published

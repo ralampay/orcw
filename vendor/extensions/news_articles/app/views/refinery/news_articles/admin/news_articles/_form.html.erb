@@ -1,0 +1,41 @@
+<%= form_for [refinery, :news_articles_admin, @news_article] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @news_article,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:content],
+                :object => "news_articles/news_article" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :date -%>
+    <%= f.datetime_select :date -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :is_published -%>
+    <%= f.check_box :is_published, :checked => @news_article[:is_published] -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.news_articles.admin.news_articles.news_article'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @news_article.title),
+             cancel_url: refinery.news_articles_admin_news_articles_path -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>
