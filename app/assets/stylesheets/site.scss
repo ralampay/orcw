@@ -6,6 +6,16 @@ html, body {
   font-family: Tahoma, Arial, Sans-serif !important;
 }
 
+footer {
+  border-top: #EEC040 2px solid;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+    }
+  }
+}
+
 .megamenu {
   width: 100%;
   transform: translate3d(0px, 0px, 0px) !important;
