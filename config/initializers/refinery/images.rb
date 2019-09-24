@@ -33,7 +33,7 @@ Refinery::Images.configure do |config|
   # This includes all dragonfly config for Dragonfly v 1.1.1
 
   config.dragonfly_name = :refinery_images
-  # config.dragonfly_verify_urls = true
+  config.dragonfly_verify_urls = false
   # config.dragonfly_secret = "f2e4b4b202a981dd8e19aadaac3d009d490cedd29cd82152"
   # config.dragonfly_url_host = ""
   # config.dragonfly_datastore_root_path = "/home/ralampay/workspace/orcw/public/system/refinery/images"
