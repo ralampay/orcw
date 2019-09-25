@@ -42,4 +42,12 @@ class PagesController < ApplicationController
       type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
     )
   end
+
+  def download_compendium
+    send_file(
+      "#{Rails.root}/files/compendium_2018_2019.pdf",
+      filename: "compendium_2018_2019.pdf",
+      type: "application/pdf"
+    )
+  end
 end
