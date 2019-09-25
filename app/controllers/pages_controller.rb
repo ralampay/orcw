@@ -47,7 +47,7 @@ class PagesController < ApplicationController
     send_file(
       "#{Rails.root}/files/compendium_2018_2019.pdf",
       filename: "compendium_2018_2019.pdf",
-      type: "application/pdf"
+      disposition: "attachment"
     )
   end
 end
