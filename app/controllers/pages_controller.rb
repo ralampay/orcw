@@ -35,6 +35,16 @@ class PagesController < ApplicationController
   def als
   end
 
+  def download_file
+    file  = "#{Rails.root}/files/#{params[:file]}"
+
+    send_file(
+      file,
+      filename: params[:file].split("/").last,
+      disposition: "attachment"
+    )
+  end
+
   def som_download_organizational_matrix
     send_file(
       "#{Rails.root}/files/som-organizational-matrix.pptx",

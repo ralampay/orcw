@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Downloads
   get "/download/compendium", to: "pages#download_compendium"
+  get "/download/file", to: "pages#download_file", as: :download_file
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
