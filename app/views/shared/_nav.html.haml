@@ -23,7 +23,7 @@
               .fa.fa-building
               University Research Council
             .dropdown-divider
-            = link_to "/ethics_office", class: "dropdown-item" do
+            = link_to "http://ateneo.edu/ureo", class: "dropdown-item" do
               .fa.fa-building
               University Research Ethics Office
             .dropdown-divider
@@ -43,6 +43,9 @@
                       %h2
                         Loyola Schools
                       %ul
+                        %li.school-image-display{ data: { label: "Gokongwei Brothers School of Education and Learning Design", img: "#{asset_path('ls-faura.jpg')}" } }
+                          = link_to "https://www.ateneo.edu/ls/gbseald" do
+                            Gokongwei Brothers School of Education and Learning Design
                         %li.school-image-display{ data: { label: "School of Science and Engineering", img: "#{asset_path('ls-faura.jpg')}" } }
                           = link_to "/ls/sose" do
                             School of Science and Engineering
@@ -78,9 +81,9 @@
                     %h6#school-display-label
                     %hr
         %li.nav-item
-          = link_to "http://penoy.admu.edu.ph/research-portal/", target: '_blank', class: "nav-link" do
+          = link_to "https://archium.ateneo.edu/", target: '_blank', class: "nav-link" do
             .fa.fa-link
-            Research and Creative Work Portal
+            University Institutional Repository (Archium)
         %li.nav-item
           = link_to "http://apply-rcw.ateneo.edu/", target: '_blank', class: "nav-link" do
             .fa.fa-link
