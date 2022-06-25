@@ -98,7 +98,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    diffy (3.3.0)
+    diffy (3.4.2)
     dotenv (2.7.2)
     dotenv-rails (2.7.2)
       dotenv (= 2.7.2)
